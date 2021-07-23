@@ -917,19 +917,8 @@ bool processKeys() {
   Serial.println(swstate);
   
   bool keypressed = true;
-  //int leftRight = 10000 - acceleration;
- // int rotate = 700;
   int down = 110 - acceleration;
 
-//  int dpadpos = Dpad::getPos();
-
-  //Serial.println(dpadpos);
-
- // switch(dpadpos) {
-   // case KEY_LEFT:
-   //   if( Dpad::DoDebounce() ) {
-      //  acceleration = Dpad::setAccel(acceleration, leftRight);
-  //    }
   if (xval <= 1400) {
     movePieceLeft();
   }
@@ -943,9 +932,6 @@ bool processKeys() {
     RotatePiece();
   }
   else{
-      //acceleration = 0; 
-//      processKey = true; 
-  //    Debounce = 0;
       keypressed = false;
   }
   if (keypressed) {
